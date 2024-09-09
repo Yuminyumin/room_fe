@@ -1,40 +1,47 @@
 import styled from 'styled-components';
+import Button from '../ui/Button';
+import Header from '../layout/Header';
+import Footer from '../layout/Footer';
 
 const Wrapper = styled.div`
-        padding: 16px;
-        width: calc(100% - 32px);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    display: flex;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `;
 const Container = styled.div`
-    width: 100%;
-    max-width: 720px;
-    & > * {
-        :not(:last-child) {
-            margin-bottom: 16px;
-        }
-    }
+    flex-direction: column;
+    align-items: center;
 `;
 
-function Homepage() {
+function HomePage() {
     
 
     return(
+        <>
+        <Header/>
         <Wrapper>
             <Container>
                 <Button 
-                    title=""
+                    title="방 구경하기"
                     onClick={()=>{
                     }} />
-                    &nbsp;&nbsp;&nbsp;
-                    <Button 
-                    title=""
+            </Container>
+            <br/>
+            <Container>
+                <Button
+                    title="방 자랑하기"
                     onClick={()=>{
                     }} />
             </Container>
         </Wrapper>
+        <Footer/>
+        </>
+        
     );
 
 }// HomePage end
+
+export default HomePage ;
