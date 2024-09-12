@@ -1,40 +1,52 @@
 import styled from 'styled-components';
-import Button from '../ui/Button';
 import Header from '../layout/Header';
 import Footer from '../layout/Footer';
+import {useNavigate} from 'react-router-dom';
+import Card from '../ui/Card';
 
 const Wrapper = styled.div`
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & > * {
+        :not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+`;
+const Container = styled.div`
     padding: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-`;
-const Container = styled.div`
-    flex-direction: column;
-    align-items: center;
+    width : 70%;
+    
 `;
 
 function HomePage() {
-    
+    const navigate = useNavigate();
 
     return(
         <>
         <Header/>
         <Wrapper>
             <Container>
-                <Button 
-                    title="방 구경하기"
-                    onClick={()=>{
-                    }} />
-            </Container>
-            <br/>
-            <Container>
-                <Button
-                    title="방 자랑하기"
-                    onClick={()=>{
-                    }} />
+                <Card src='./img/home'
+                      alt='방 구경하기'
+                      content='수많은 방을 구경하고 골라보아요!'
+                      title='방 구경하기'
+                      onClick={()=> {
+                        navigate("rooms-view");
+                      }}/>
+                <Card src='./img/home1'
+                      alt='방 자랑하기'
+                      content='사람들에게 방을 자랑해보아요!'
+                      title='방 자랑하기'
+                      onClick={()=> {
+                        navigate("rooms-upload");
+                      }}/>
             </Container>
         </Wrapper>
         <Footer/>
