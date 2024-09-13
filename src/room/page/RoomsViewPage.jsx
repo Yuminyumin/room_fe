@@ -4,6 +4,8 @@ import RoomsList               from "../list/RoomsList";
 import Button                  from "../ui/Button";
 import { useEffect, useState } from "react";
 import api                     from "../api/axios";
+import Header from "../layout/Header";
+import Footer from "../layout/Footer";
 
 const Wrapper = styled.div`
     padding: 16px;
@@ -47,15 +49,20 @@ function RoomsViewPage(){
     };
 
     return(
-        <Wrapper>
+        <>
+            <Header/>
+            <Wrapper>
             <Container>
+                <RoomsList data={list}/>
                 <ButtonContainer>
                     <StyledButton title="홈으로"
                             onClick={()=>{navigate("/");}}/>
                 </ButtonContainer>
-                <RoomsList data={list}/>
             </Container>
-        </Wrapper>
+            </Wrapper>
+            <Footer/>
+        </>
+        
     );
 }
 export default RoomsViewPage;
