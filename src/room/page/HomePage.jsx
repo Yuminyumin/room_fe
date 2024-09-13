@@ -4,6 +4,9 @@ import Footer from '../layout/Footer';
 import {useNavigate} from 'react-router-dom';
 import Card from '../ui/Card';
 
+import find from '../img/find.png';
+import home1 from '../img/home2.jpg';
+
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -23,6 +26,7 @@ const Container = styled.div`
     justify-content: center;
     width : 70%;
     
+    
 `;
 
 function HomePage() {
@@ -33,14 +37,14 @@ function HomePage() {
         <Header/>
         <Wrapper>
             <Container>
-                <Card src='./img/home'
+                <Card src={find}
                       alt='방 구경하기'
                       content='수많은 방을 구경하고 골라보아요!'
                       title='방 구경하기'
                       onClick={()=> {
                         navigate("rooms-view");
                       }}/>
-                <Card src='./img/home1'
+                <Card src={home1}
                       alt='방 자랑하기'
                       content='사람들에게 방을 자랑해보아요!'
                       title='방 자랑하기'

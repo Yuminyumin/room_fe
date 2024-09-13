@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import home from '../img/home.jpeg';
 
 const Container = styled.div`
     display : flex;
@@ -24,7 +25,8 @@ function Header() {
 	return (
         <>
 		    <Container>
-                <Logo src="../img/home2.jpg" alt="Logo"/>
+                &nbsp;&nbsp;
+                <Logo src={home} alt="Logo"/>
                 <Title>유민의 방 찾기</Title>
 		    	<div>
 		    		<a href="Login" className="btn btn-primary">Login</a>

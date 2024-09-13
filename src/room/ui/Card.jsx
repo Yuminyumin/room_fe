@@ -7,14 +7,15 @@ const Container = styled.div`
     align-items     : center;
     justify-content : center;
     padding         : 16px;
-    width           : calc(100% - 32px);
+    width           : 80%;
     border          : 2px solid #ccc;
     border-radius   : 8px;
 `;
 const Image = styled.img`
-    width           : 33.33%;
+    width           : 20%;
     height          : auto;
     border-radius   : 8px;
+    margin-right     : 50px;
 `;
 const TextContainer = styled.div`
     display         : flex;
@@ -27,6 +28,7 @@ function Card(props){
     return(
         <Container>
             <Image src={props.src} alt={props.alt}/>
+            
             <TextContainer>
                 <h4>{props.content}</h4>
                 <Button title={props.title} onClick={props.onClick}/>
