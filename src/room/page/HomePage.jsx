@@ -5,7 +5,7 @@ import {useNavigate} from 'react-router-dom';
 import Card from '../ui/Card';
 
 import find from '../img/find.png';
-import home1 from '../img/home2.jpg';
+import room from '../img/room.png';
 
 const Wrapper = styled.div`
     display: flex;
@@ -44,7 +44,7 @@ function HomePage() {
                       onClick={()=> {
                         navigate("rooms-view");
                       }}/>
-                <Card src={home1}
+                <Card src={room}
                       alt='방 자랑하기'
                       content='사람들에게 방을 자랑해보아요!'
                       title='방 자랑하기'

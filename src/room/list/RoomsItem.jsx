@@ -49,9 +49,10 @@ function RoomsItem(props){
                     <Image src={""} alt="roomImage"/>
                 </ImgContainer>
                 <TextContainer>
-                    <TitleText>{props.data.title}</TitleText>
-                    <TitleText>{props.data.content}</TitleText>
-                    <TitleText>{props.data.memo}</TitleText>
+                    <TitleText>Title : {props.data.title}</TitleText>
+                    <TitleText>Content : {props.data.content}</TitleText>
+                    <TitleText>Memo : {props.data.memo}</TitleText>
+                    <TitleText>Tel : {props.data.tel}</TitleText>
                 </TextContainer>
             </Container>
         </Wrapper>
