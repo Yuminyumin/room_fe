@@ -20,7 +20,7 @@ function RoomsList(props){
     return(
         <Wrapper>
             {data.map((room)=>(
-                <RoomsItem data={room}/>
+                <RoomsItem key={room.id} data={room} roomsId={room.id}/>
             ))}
         </Wrapper>
     );
